@@ -1,0 +1,53 @@
+﻿@page "/department"
+@inject HttpClient Http
+
+<h3>Department</h3>
+
+@if (departmentEntities == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Department ID</th>
+                <th>Name</th>
+                <th>Group Name</th>
+                <th>Modified Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var department in departmentEntities)
+            {
+                <tr>
+                    <td>@department.DepartmentID.ToString()</td>
+                    <td>@department.Name</td>
+                    <td>@department.GroupName</td>
+                    <td>@department.ModifiedDate.ToString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+
+    private DepartmentEntity[] departmentEntities;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        departmentEntities = await Http.GetFromJsonAsync<DepartmentEntity[]>("sample-data/departmentData.json");
+    }
+
+    public class DepartmentEntity
+    {
+        public int DepartmentID { get; set; }
+        public string Name { get; set; }
+        public string GroupName { get; set; }
+        public DateTime ModifiedDate { get; set; }
+    }
+
+}

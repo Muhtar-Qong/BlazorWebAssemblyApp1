@@ -1,0 +1,38 @@
+[
+  {
+    "DepartmentID": "1",
+    "Name": "Engineering",
+    "GroupName": "Research and Development",
+    "ModifiedDate": "2008-04-30"
+  },
+  {
+    "DepartmentID": "2",
+    "Name": "Tool Design",
+    "GroupName": "Research and Development",
+    "ModifiedDate": "2008-04-30"
+  },
+  {
+    "DepartmentID": "3",
+    "Name": "Sales",
+    "GroupName": "Sales and Marketing",
+    "ModifiedDate": "2008-04-30"
+  },
+  {
+    "DepartmentID": "4",
+    "Name": "Marketing",
+    "GroupName": "Sales and Marketing",
+    "ModifiedDate": "2008-04-30"
+  },
+  {
+    "DepartmentID": "5",
+    "Name": "Purchasing",
+    "GroupName": "Inventory Management",
+    "ModifiedDate": "2008-04-30"
+  },
+  {
+    "DepartmentID": "7",
+    "Name": "Production",
+    "GroupName": "Manufacturing",
+    "ModifiedDate": "2008-04-30"
+  }
+]
